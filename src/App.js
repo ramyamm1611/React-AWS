@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { Component } from "react";
+import Fruit  from "./FruitsClass";
+import FruitFunctional from './FruitsFunctional'
+import { connect } from "react-redux";
+const App = () => {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Fruit/>
+    <FruitFunctional/>
     </div>
   );
-}
+};
 
-export default App;
+
+const mapStateToProps = (state) => {
+  return { ...state.data };
+};
+
+export default connect(mapStateToProps)(App)
