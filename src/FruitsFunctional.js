@@ -3,7 +3,7 @@ import FruitList from "./FruitList";
 
 const FruitsFunctional = (props) => {
 
-    const[FruitsList,setFruitsList] = useState(["Apple","Orange","Banana"])
+    const[FruitsList,setFruitsList] = useState(["Papaya","Orange","Banana"])
     const[count,setcount] = useState(1)
 
    const increment = () =>{
